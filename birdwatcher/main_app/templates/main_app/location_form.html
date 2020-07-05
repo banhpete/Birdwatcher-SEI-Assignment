@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %} {% if form.name.value%}
+
+<h2>Update {{ form.name.value}}</h2>
+
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Update" class="btn" />
+</form>
+
+{% else %}
+
+<h2>Add location</h2>
+
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Save" class="btn" />
+</form>
+
+{% endif %} {% endblock %}
