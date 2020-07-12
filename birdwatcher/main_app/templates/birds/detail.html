@@ -98,8 +98,8 @@
     {% endif %}
   </div>
   <div class="col s6">
-    {% if locations.count %} {% for location in locations.all %}
     <h3>Select locations {{bird.name}} has been seen at</h3>
+    {% if locations.count %} {% for location in locations.all %}
     <div class="card">
       <div class="card-content">
         <span class="card-title">
